@@ -56,7 +56,7 @@ streamlit run app.py
 
 ## Miscellaneous
 
-The scripts use the following libraries:
+The scripts uses the following libraries:
 
 - pandas
 - numpy
@@ -65,12 +65,12 @@ The scripts use the following libraries:
 Install them as follows:
 
 ```bash
-pip install pandas numpy sklearn
+pip install pandas numpy scikit-learn
 ```
 
 ## Usage
 
-To use the chatbot, run the Streamlit application as described above. The application will provide a web user interface where you can interact with the chatbots.
+To use the chatbot, run the Streamlit application as described above. The applications will provide a web user interface where you can interact with the chatbots.
 
 There are 3 chatbots available:
 
@@ -86,6 +86,10 @@ streamlit run chatbot.py
 
 Application showing how to search documents based on cosine similarity of embeddings.
 
+Some example documents are included in the `text` directory (the script only uses `*.txt` files in this directory).
+
+The embeddings are stored in a local `embeddings.txt` file. When the script is run for the first time, press the "Generate Embeddings" button to generate this file.
+
 ```bash
 streamlit run cosine_similarity.py
 ```
@@ -93,6 +97,8 @@ streamlit run cosine_similarity.py
 ### **chatbot_rag.py**
 
 Chatbot application using OpenAI's API with RAG (Retrieval-Augmented Generation). Combining 1 and 2.
+
+This script imports the `cosine_similarity.py` script to re-use it's embeddings functions.
 
 ```bash
 streamlit run chatbot_rag.py
