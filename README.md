@@ -54,6 +54,8 @@ To run a Streamlit application, navigate to the directory where your `app.py` fi
 streamlit run app.py
 ```
 
+More information about Streamlit can be found in the [Streamlit documentation](https://docs.streamlit.io/).
+
 ## Miscellaneous
 
 The scripts uses the following libraries:
