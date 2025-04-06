@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
  
 st.write("""
 # My first app
@@ -32,7 +33,8 @@ st.write("The current pet is ", pet)
 st.text_input("Your name", key="name")
 st.write("The current name is ", st.session_state.name)
 
-df = pd.read_csv("my_data.csv")
+filepath = os.path.join("text", "dummy_data.csv")
+df = pd.read_csv(filepath)
 st.line_chart(df)
 
 chart_data = pd.DataFrame(
